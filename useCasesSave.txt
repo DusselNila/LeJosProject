@@ -62,6 +62,8 @@ Auszuführende Aktionen
 Aktionen für Ausnahmen
 							1.A Kein sensor ist gedrückt
 							1.A.1 Rückwärtsfahren bis kante ertastet; return 3;
+							2.B Fällt runter
+							2.B.1 break;
 
 -------------------------------------------------------------------------------------
 
@@ -85,7 +87,7 @@ Aktionen für Ausnahmen
 
 -------------------------------------------------------------------------------------
 
-Name 						an kante fahren
+Name 						an kante entlang fahren
 Nummer 						5
 Geltungsbereich
 Beteiligte Klassen
@@ -101,6 +103,8 @@ Auszuführende Aktionen
 Aktionen für Ausnahmen
 							2.A Von Spur abgekommen
 							2.A.1 Spurkorrektur; return;
+							2.B Fällt runter
+							2.B.1 break;
 
 
 -------------------------------------------------------------------------------------
@@ -115,11 +119,12 @@ Nachbedingung(Fehlschlag)
 Akteure
 Auslösendes Ereignis
 
-Auszuführende Aktionen
+Auszuführende Aktionen				1. Ecke Ausloten
+						2. Umfahren
 							
-Aktionen für Ausnahmen
+Aktionen für Ausnahmen				1.A Fällt runter
+						1.A.1 break;
 
-bla
 
 
 
