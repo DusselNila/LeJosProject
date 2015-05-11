@@ -19,33 +19,9 @@ Use Cases
 
 -------------------------------------------------------------------------------------
 
-Name						Kante finden
+
+Name 						Fahren bis kante (Hannah)
 Nummer 						1
-Geltungsbereich				Roboter
-Beteiligte Klassen			{}
-Vorbedingung				Roboter ist an und programm wurde gestartet
-Nachbedingung(Erfolg)		Kante wurde gefunden
-Nachbedingung(Fehlschlag)	Runtergefallen
-Akteure						Drucksensor1, Drucksensor2
-Auslösendes Ereignis		Programmstart
-
-Auszuführende Aktionen		1. Fahren bis Drucksensor1/Drucksensor2 ausschlägt
-							2. Positionieren parallel zur kante
-							
-Aktionen für Ausnahmen		1a Falls fehler beim fahren, breche ab; exit
-
--------------------------------------------------------------------------------------
-
-Name						Fahren bis Sensor anschlägt
-Nummer 						2
-Geltungsbereich				Motorsteuerung
-Beteiligte Klassen			{}
-Vorbedingung				
-
--------------------------------------------------------------------------------------
-
-Name 						Fahren bis kante
-Nummer 						3
 Geltungsbereich
 Beteiligte Klassen
 Vorbedingung
@@ -67,8 +43,8 @@ Aktionen für Ausnahmen
 
 -------------------------------------------------------------------------------------
 
-Name 						Positionieren
-Nummer 						4
+Name 						Positionieren (Denise)
+Nummer 						2
 Geltungsbereich
 Beteiligte Klassen
 Vorbedingung
@@ -87,8 +63,8 @@ Aktionen für Ausnahmen
 
 -------------------------------------------------------------------------------------
 
-Name 						an kante entlang fahren
-Nummer 						5
+Name 						an kante entlang fahren (Jan)
+Nummer 						3
 Geltungsbereich
 Beteiligte Klassen
 Vorbedingung
@@ -109,8 +85,8 @@ Aktionen für Ausnahmen
 
 -------------------------------------------------------------------------------------
 
-Name 						über ecke fahren
-Nummer 						6
+Name 						über ecke fahren (Flo)
+Nummer 						4
 Geltungsbereich
 Beteiligte Klassen
 Vorbedingung
