@@ -88,15 +88,17 @@ Aktionen für Ausnahmen
 Name 						über ecke fahren (Flo)
 Nummer 						4
 Geltungsbereich
-Beteiligte Klassen
-Vorbedingung
-Nachbedingung(Erfolg)
+Beteiligte Klassen				engineController 
+Vorbedingung					Ecke ist gefunden
+Nachbedingung(Erfolg)				Weiter mit UseCase 3
 Nachbedingung(Fehlschlag)
-Akteure
-Auslösendes Ereignis
+Akteure						Sensoren
+Auslösendes Ereignis				Ecke wird gefunden
 
-Auszuführende Aktionen				1. Ecke Ausloten
-						2. Umfahren
+Auszuführende Aktionen				1. Nach Rechts drehen bis  vorderer Sensor wieder anschlägt
+						2. Parallel zur Kante Stellen
+						3. Weiterfahren
+						
 							
 Aktionen für Ausnahmen				1.A Fällt runter
 						1.A.1 break;
