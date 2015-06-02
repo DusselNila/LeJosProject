@@ -66,12 +66,12 @@ Aktionen für Ausnahmen
 Name 						an kante entlang fahren (Jan)
 Nummer 						3
 Geltungsbereich
-Beteiligte Klassen
-Vorbedingung
-Nachbedingung(Erfolg)
-Nachbedingung(Fehlschlag)
-Akteure
-Auslösendes Ereignis
+Beteiligte Klassen                              engineController, roboLogic
+Vorbedingung                                    hat kante gefunden, nicht an einer ecke
+Nachbedingung(Erfolg)                           nicht runtergefallen
+Nachbedingung(Fehlschlag)                       runtergefallen (nicht prüfbar)
+Akteure                                         sensoren, user
+Auslösendes Ereignis                            kante gefunden
 
 Auszuführende Aktionen
 							1. Anfahren
