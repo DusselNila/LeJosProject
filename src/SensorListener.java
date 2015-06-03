@@ -1,11 +1,20 @@
 import lejos.nxt.*;
 
-public class SensorListener 
+import EventImpl.*;
+import Interfaces.*;
+
+public class SensorListener extends Observable implements ISensorListener
 {
+	private TouchSensor _sensor;
 	
-	
-	public SensorListener()
+	public SensorListener(TouchSensor watchedSensor)
 	{
-		
+		_sensor = watchedSensor;
+	}
+	
+	@Override
+	public boolean getSensorState()
+	{
+		return _sensor.isPressed();
 	}
 }
