@@ -9,7 +9,7 @@ public class BoolEventArgs
 		_flag = flag;
 	}
 	
-	public boolean getArgs()
+	public boolean getFlag()
 	{
 		return _flag;
 	}
