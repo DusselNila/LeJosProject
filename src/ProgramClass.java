@@ -15,8 +15,8 @@ public class ProgramClass {
 		Motor.A.stop();
 		Motor.B.stop();
 		
-		engineController engine = new engineController();
-		engine.execute();
+		EdgeLogic logic = new EdgeLogic();
+		logic.start();
 	}
 
 }
