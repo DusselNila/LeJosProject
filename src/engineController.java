@@ -1,21 +1,37 @@
+import Interfaces.INotification;
+import Interfaces.IObserver;
 import lejos.nxt.*;
 
 
-public class engineController {
-
-	public static void main(String[] args) throws InterruptedException {
+public class engineController implements IObserver {
+	SensorListener listenerVorne;
+	SensorListener listenerLinks;
+	boolean kante = false; 
+	
+	public void execute() {
+		TouchSensor sensorVorne = new TouchSensor(SensorPort.S1);
+		TouchSensor sensorLinks = new TouchSensor(SensorPort.S2);
+		listenerVorne = new SensorListener(sensorVorne);
+		listenerLinks = new SensorListener(sensorLinks);
+		listenerVorne.addObserver(this);
+		listenerLinks.addObserver(this);
+	}
+	
+	@Override
+	public void update(INotification msg) {
+		//Kante anfahren
+		if(kante == false){
+			if(listenerVorne.getSensorState() == false) {
+				//Drehen
+			} 
+			else if(listenerVorne.getSensorState() == true) {
+				if(msg.getObject() == listenerVorne){
+				//Drehen stoppen und losfahren
+				kante = true;
+				}
+			}
+		}
 		
-		Motor.A.setSpeed(500);
-		Motor.B.setSpeed(500);
-		
-		Motor.A.forward();
-		Motor.B.forward();
-		
-		Thread.sleep(2000);
-		
-		Motor.A.stop();
-		Motor.B.stop();
-
 	}
 
 }
