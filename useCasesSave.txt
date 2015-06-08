@@ -43,24 +43,24 @@ Aktionen für Ausnahmen
 
 -------------------------------------------------------------------------------------
 
-Name 						Positionieren (Denise)
+Name 						Position festlegen (Denise)
 Nummer 						2
-Geltungsbereich
-Beteiligte Klassen
-Vorbedingung
-Nachbedingung(Erfolg)
-Nachbedingung(Fehlschlag)
-Akteure
-Auslösendes Ereignis
+Geltungsbereich				Roboter
+Beteiligte Klassen			EngineController, EdgeLogic, SensorListener
+Vorbedingung				Roboter hat eine Kante gefunden.
+Nachbedingung(Erfolg)		Roboter steht parallel zur Kante.
+Nachbedingung(Fehlschlag)	
+Akteure						Benutzer
+Auslösendes Ereignis		Roboter ist bis zur Kante gefahren.
 
 Auszuführende Aktionen
 							1. Kante ausloten
-							2. Parallel zur kante drehen
+							2. Parallel zur Kante drehen
 							
 Aktionen für Ausnahmen
-							1.A schon an der Ecke
-							1.A.1 -> über Ecke fahren (6)
-
+							1.A Roboter befindet sich an einer Ecke
+							1.A.1 -> über Ecke fahren (4)
+							
 -------------------------------------------------------------------------------------
 
 Name 						an kante entlang fahren (Jan)
