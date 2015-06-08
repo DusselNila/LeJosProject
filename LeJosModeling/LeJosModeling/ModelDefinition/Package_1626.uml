@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="c80064c5-b552-416b-95e6-399ac7f22379"
+  name="Default" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="1d47d858-30e3-413d-ac3c-bdee86aa3451"
+        name="SensorListener"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="dc3c0cf1-fdf4-415f-91e9-82658b2373bf">
+            <interfaceMoniker
+              Id="975d0411-a754-4aa9-91b3-51c1baa33e86"
+              LastKnownName="ISensorListener"
+              LastKnownLocation="Package2_1626.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="54ee9a8f-dc53-4888-abe7-6b2ef40ea898"
+            isSubstitutable="false">
+            <classMoniker
+              Id="917d97d0-1d43-43e6-9b69-baaf66890867"
+              LastKnownName="Observable"
+              LastKnownLocation="Package1_1626.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="6aa339a6-f34a-4f7e-ad2b-27063bc90026"
+            name="SensorState"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="82253f31-b881-46d4-9293-55ecf7a136d5"
+                LastKnownName="boolean"
+                LastKnownLocation="Package2_1626.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0334d137-3b5d-4078-8664-15518a91207a"
+            name="addObserver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="48d1dc7b-8329-4c8f-9c86-6005ea8ad0a5"
+                  name="IObserver"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="fedbf207-1e53-4598-ae26-ec6165e98407"
+            name="deleteObserver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d2000c5e-0509-4ddf-a32b-aec4c5a3a1b5"
+                  name="IObserver"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cbd153d1-ed19-4c9f-bbe1-a7147172c99b"
+            name="notifyObservers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="91482390-83c4-4fa9-b991-e37912dd189b"
+                  name="INotification"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="a3b2594b-6fe8-4cb9-9f77-034e7e813ee4"
+            name="SensorListener"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="163acd2e-a51c-4bd7-ad29-7da0297b032f"
+                  name="TouchSensor"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="fd602bf3-4a1f-421b-bbb0-27b3bc7da758"
+        name="EngineController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="cee839ef-5547-4353-9762-2e5cd7d4112d"
+        name="EdgeLogic"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="29a29c6d-a99e-45a2-a5cf-8f2a834315c6"
+        name="Program"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

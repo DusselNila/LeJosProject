@@ -25,7 +25,7 @@ public class engineController implements IObserver {
 				//Drehen
 			} 
 			else if(listenerVorne.getSensorState() == true) {
-				if(msg.getObject() == listenerVorne){
+				if(msg.getSender() == listenerVorne){
 				//Drehen stoppen und losfahren
 				kante = true;
 				}

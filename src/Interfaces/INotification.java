@@ -2,6 +2,6 @@ package Interfaces;
 
 public interface INotification
 {
-	Object getObject();
+	Object getSender();
 	Object getArgs();
 }

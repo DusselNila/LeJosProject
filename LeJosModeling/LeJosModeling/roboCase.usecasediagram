@@ -1,1 +1,112 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="c3e487fb-a44a-4588-b1b2-fdc31e984267" name="roboCase" linkedPackageId="4fd8aaee-06e1-47f9-9faa-1fda94eaec9c" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="4d3c4d6e-ba9a-4a66-b4bd-3a0c4797eb9b">
+      <profileInstance Id="18cddba1-c9f8-4ad5-a1db-054cc0b3c289" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f400f379-71cd-4264-95f4-0800a6a1f23d">
+      <profileInstance Id="ac8f511b-c550-4353-b3b5-810a202f7d66" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="a4ed0dac-cb91-4127-a208-2f4c0089e41c" name="User" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="59cd1336-e75d-4309-9e77-4cc1e3843fcc" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bd85f345-24ca-463f-a02a-d89a7311dfec" name="Fahren bis kante" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89bcace9-9500-4966-ac85-82b365ca20d7" />
+        <targetEnds>
+          <association Id="d964dccc-74db-4aa8-8208-f1fecc08606e" isDerived="false" sourceEndRoleName="Fahren bis kante" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="a4ed0dac-cb91-4127-a208-2f4c0089e41c" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3b359d71-42b5-46d4-8217-381e827a462e" name="Fahren bis kante" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="64d07e7e-6fe8-4403-ab59-2869c00af96c" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b25413ac-873b-4355-9144-79a8ea7bc888" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5d16fc09-04e3-46ab-aa66-7d74e4b1036a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="77e321a5-3ac8-4d6f-83c5-42363ba311a2" />
+          </association>
+        </targetEnds>
+        <additions>
+          <include Id="5213a833-db46-4e6e-b906-b5dea3a8a738">
+            <useCaseMoniker Id="8a9a0c6d-e7e7-4ea9-8dac-2a6650304add" LastKnownName="Positionieren" />
+            <elementDefinition Id="5b6baf2d-9035-4c9e-9df8-0e781672ab28" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8a9a0c6d-e7e7-4ea9-8dac-2a6650304add" name="Positionieren" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c6e65ad1-63d2-499f-aadc-82c7421d1073" />
+        <additions>
+          <include Id="65071698-ad13-4882-9287-3736e105c700">
+            <useCaseMoniker Id="981c701a-a07c-4dfa-8fc2-afc92d27e076" LastKnownName="An Kante entlang fahren" />
+            <elementDefinition Id="3aabc0a2-8be1-411d-b4c4-5a3c9baa193b" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="981c701a-a07c-4dfa-8fc2-afc92d27e076" name="An Kante entlang fahren" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9cf02800-b089-4cae-8c9f-59899a1b0c16" />
+        <additions>
+          <include Id="bf0f36e0-d2ca-4c75-af69-4ca86dc6aecc">
+            <useCaseMoniker Id="37986cbf-5579-4384-a00f-3ffebf0bfc3a" LastKnownName="Über ecke fahren" />
+            <elementDefinition Id="6412a044-9a9d-4c71-a21f-f334f8d1bfb8" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="37986cbf-5579-4384-a00f-3ffebf0bfc3a" name="Über ecke fahren" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f8337620-58f0-4e5a-b3a6-91bb4f5febd2" />
+        <additions>
+          <include Id="47b927d7-8931-4298-9c9a-2fdbdfd745f3">
+            <useCaseMoniker Id="981c701a-a07c-4dfa-8fc2-afc92d27e076" LastKnownName="An Kante entlang fahren" />
+            <elementDefinition Id="942e48c8-b602-4474-84a2-42cd4730ba54" />
+          </include>
+        </additions>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="03537b4c-526b-4fa4-afaa-692d1c63b6af" name="Stop" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="081913ba-2776-4ee2-b8d0-f160a3046a62" />
+        <targetEnds>
+          <association Id="a3764ee3-06e9-4544-8a9b-28a83a1d1dd7" isDerived="false" sourceEndRoleName="Stop" targetEndRoleName="User" isLeaf="false" isAbstract="false">
+            <actorMoniker Id="a4ed0dac-cb91-4127-a208-2f4c0089e41c" LastKnownName="User" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="12cee64a-58b1-4f06-8335-285d427d0d9d" name="Stop" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8d5f37c3-5d39-41c4-8f39-f9935486ab18" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0b3bb64e-ddb1-42d3-a129-f8ba07356475" name="User" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="daf47d67-219d-4daa-8b73-96886596c90e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ec58668f-2991-4f5c-86b5-f7a53b664a77" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4fd8aaee-06e1-47f9-9faa-1fda94eaec9c" name="LeJosModeling">
+    <elementDefinition Id="a89968ff-eb85-4e11-be93-ec3d17f975ac" />
+  </package>
+</useCaseModelRoot>

@@ -14,7 +14,7 @@ public class Notification implements INotification
 	}
 	
 	@Override
-	public Object getObject()
+	public Object getSender()
 	{
 		return sender;
 	}

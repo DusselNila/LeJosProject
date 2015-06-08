@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4e7e8c0d-f0b6-423a-bade-0f436b97bc50"
+  name="EventImpl" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="80cca26d-2920-4426-97b8-e80387bdea05"
+        name="BoolEventArgs"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="ea0386ba-f8aa-41e1-b5ac-c9d39c6ddc6d"
+            name="Flag"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="LeJosModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="518894be-0bb2-4b7e-977e-f2886ff7e54c"
+            name="BoolEventArgs"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d738794a-cf47-46ee-889d-7eb46e4c0162"
+                  name="Boolean flag"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a73029ff-5382-442e-adb5-7b35bb8a2c18"
+        name="Notification"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9f5b79f9-4125-4d3e-a706-4ef95881d6b9">
+            <interfaceMoniker
+              Id="73485ae4-b5f8-459d-a521-6fa18860236f"
+              LastKnownName="INotification"
+              LastKnownLocation="Package2_1626.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="73ceb918-57b5-43f6-b7cf-c3a9904901e0"
+            name="Args"
+            isLeaf="true"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e387f34-d59b-4a06-bfe4-5bfc44bc4bf7"
+                LastKnownName="Object"
+                LastKnownLocation="Package2_1626.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="e8a582c8-a6fe-4851-96bc-2750f2592c3a"
+            name="Sender"
+            isLeaf="true"
+            isStatic="false"
+            isReadOnly="true"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="2e387f34-d59b-4a06-bfe4-5bfc44bc4bf7"
+                LastKnownName="Object"
+                LastKnownLocation="Package2_1626.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="5b885605-fed5-404f-9d9a-3572d4ea5434"
+            name="Notification"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="86185d82-eadf-4113-b3a4-9053f73d57d4"
+                  name="Object sender"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f5dc611b-4976-4bb8-b146-1765dd368673"
+                  name="Object args"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="917d97d0-1d43-43e6-9b69-baaf66890867"
+        name="Observable"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="bf3ab1b7-1761-47e1-8109-b6a9c1a338db">
+            <interfaceMoniker
+              Id="43cfc3ad-6449-41c1-a4d0-c87e270a0d7f"
+              LastKnownName="IObservable"
+              LastKnownLocation="Package2_1626.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <targetEnds>
+          <association
+            Id="6b6acd25-6519-4595-9a23-214bf7ef986b"
+            isDerived="false"
+            sourceEndRoleName="Event Emitting Class"
+            targetEndRoleName="Observing Classes"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="0229adc1-d096-435e-89dd-b1be8795d834"
+              LastKnownName="IObserver"
+              LastKnownLocation="Package2_1626.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03b8207a-3a3e-4fdb-9a28-6c3846076471"
+                  name="Event Emitting Class"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="37b14df9-0cb3-443f-9b13-4d3f52c44b70"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="d626a2b4-40dd-4619-b561-bff082db46fa"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d09f5846-d538-4b52-b15d-e14475f34772"
+                  name="Observing Classes"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e728f170-ce91-4394-948e-f3f5eb03ab8c"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="da7d2c9a-6f7e-4ddc-ae31-0762b43ab682"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="7661208f-6c68-4f20-8c2e-4cd3538f3527"
+            name="addObserver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="8a6953c8-4f73-4a3b-bff4-3bfa1017f8fd"
+                  name="IObserver"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f09df243-b956-44dd-99e6-213635a3b90b"
+            name="deleteObserver"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="ad5ed702-79a6-4273-80c6-27da1c105d69"
+                  name="IObserver"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="562aec05-fe4b-4d86-b0d9-249d6b1b4a31"
+            name="notifyObservers"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4515119d-8e2d-49c9-933b-02da62bb7e1b"
+                  name="INotification"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
