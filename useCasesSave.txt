@@ -88,11 +88,11 @@ Aktionen für Ausnahmen
 Name 						über ecke fahren (Flo)
 Nummer 						4
 Geltungsbereich
-Beteiligte Klassen				engineController 
+Beteiligte Klassen				engineController, roboLogic
 Vorbedingung					Ecke ist gefunden
 Nachbedingung(Erfolg)				Weiter mit UseCase 3
-Nachbedingung(Fehlschlag)
-Akteure						Sensoren
+Nachbedingung(Fehlschlag)			runtergefallen (nicht prüfbar)
+Akteure						Sensoren, user
 Auslösendes Ereignis				Ecke wird gefunden
 
 Auszuführende Aktionen				1. Nach Rechts drehen bis  vorderer Sensor wieder anschlägt
